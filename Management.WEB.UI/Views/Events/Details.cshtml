@@ -1,0 +1,82 @@
+﻿@model Manager.Core.Model.Entity.Events
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Events</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Subject)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Subject)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Start)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Start)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.End)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.End)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ThemeColor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ThemeColor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.IsFullDay)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IsFullDay)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CitizenID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CitizenID)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.EventID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

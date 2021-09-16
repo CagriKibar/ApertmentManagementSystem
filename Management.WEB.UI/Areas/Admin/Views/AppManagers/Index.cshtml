@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Manager.Core.Model.Entity.AppManager>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<p>
+    <button class="btn btn-default"> @Html.ActionLink("Yeni Oluştur", "Create")</button>  
+</p>
+<table class="table table-light">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAdmin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreateManagerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateManagerID)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsAdmin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateManagerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateManagerID)
+        </td>
+        <td>
+            <button class="btn btn-default">@Html.ActionLink("Düzenle", "Edit", new { id = item.ID }) |</button>    
+            <button class="btn btn-default">@Html.ActionLink("Detaylar", "Details", new { id = item.ID }) | |</button>    
+            <button class="btn btn-default">@Html.ActionLink("Sil", "Delete", new { id = item.ID }) |</button>    
+            
+            
+        </td>
+    </tr>
+}
+</table>
+<br />

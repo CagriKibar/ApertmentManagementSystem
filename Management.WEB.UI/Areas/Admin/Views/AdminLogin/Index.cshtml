@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Login-form/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="~/Login-form/css/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Login-form/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/Login-form/css/style.css">
+    <title>Bina Yönetim Giriş</title>
+</head>
+<body>
+    
+
+    <div class="content">
+        
+        <div class="container">
+            <div class="row justify-content-center">
+
+                @*<img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">*@
+               
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="form-block">
+                                <div class="mb-4">
+                                    <h3>Giriş Yapın <strong>Bina Yönetim Sistemi </strong></h3>
+                                    <p class="mb-4">Hoşgeldiniz Lütfen Giriş Yapın</p>
+                                </div>
+                                @{if (ViewBag.Error != null)
+                                    {
+                                        <div class=" alert alert-danger">
+                                            @ViewBag.Error
+                                        </div>
+                                    }}
+                                @using (Html.BeginForm("Index", "AdminLogin", FormMethod.Post))//gideceği sayfa-gideceği controlleri
+                                {
+                                    <div class="form-group">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+                                        <input type="text" class="form-control" name="Email" placeholder="Kullanıcı Adı" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
+                                        <input type="password" class="form-control" name="Password" placeholder="Parola" required>
+                                    </div>
+                                    <div class="form-group d-md-flex">
+                                        <div class="w-100 text-md-right">
+                                            <a href="#">Parolamı Unuttum</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn form-control btn-primary rounded submit px-3">Giriş Yap</button>
+
+                                    </div>
+                                    <a href="/Home" class="btn btn-primary">Anasayfa</a>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Login-form/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Login-form/js/popper.min.js"></script>
+    <script src="~/Login-form/js/bootstrap.min.js"></script>
+    <script src="~/Login-form/js/main.js"></script>
+</body>
+
+</html>

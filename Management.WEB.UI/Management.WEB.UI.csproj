@@ -1,0 +1,1246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95E2EFFE-2B5D-4F1F-8E9F-0E263F9E971A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Management.WEB.UI</RootNamespace>
+    <AssemblyName>Management.WEB.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\AdminControllerBase.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminLoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AppManagersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BanksController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CitizensController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EventsController.cs" />
+    <Compile Include="Controllers\BanksController.cs" />
+    <Compile Include="Controllers\CalendarController.cs" />
+    <Compile Include="Controllers\CitizenListController.cs" />
+    <Compile Include="Controllers\CitizenLoginController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui.theme.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fullcalendar-master\assets\css\fullcalendar.css" />
+    <Content Include="fullcalendar-master\assets\css\fullcalendar.print.css" />
+    <Content Include="fullcalendar-master\assets\js\fullcalendar.js" />
+    <Content Include="fullcalendar-master\assets\js\jquery-1.10.2.js" />
+    <Content Include="fullcalendar-master\assets\js\jquery-ui.custom.min.js" />
+    <Content Include="fullcalendar-master\fullcalendar.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="green-horizotal\404.html" />
+    <Content Include="green-horizotal\accordion.html" />
+    <Content Include="green-horizotal\alert.html" />
+    <Content Include="green-horizotal\analytics.html" />
+    <Content Include="green-horizotal\animations.html" />
+    <Content Include="green-horizotal\area-charts.html" />
+    <Content Include="green-horizotal\bar-charts.html" />
+    <Content Include="green-horizotal\buttons.html" />
+    <Content Include="green-horizotal\chosen-sprite.png" />
+    <Content Include="green-horizotal\code-editor.html" />
+    <Content Include="green-horizotal\color.html" />
+    <Content Include="green-horizotal\compose-email.html" />
+    <Content Include="green-horizotal\contact.html" />
+    <Content Include="green-horizotal\css\animate.css" />
+    <Content Include="green-horizotal\css\animation\animation-custom.css" />
+    <Content Include="green-horizotal\css\bootstrap-select\bootstrap-select.css" />
+    <Content Include="green-horizotal\css\bootstrap.min.css" />
+    <Content Include="green-horizotal\css\c3\c3.min.css" />
+    <Content Include="green-horizotal\css\chosen\chosen-sprite.png" />
+    <Content Include="green-horizotal\css\chosen\chosen.css" />
+    <Content Include="green-horizotal\css\code-editor\1.jpg" />
+    <Content Include="green-horizotal\css\code-editor\ambiance.css" />
+    <Content Include="green-horizotal\css\code-editor\codemirror.css" />
+    <Content Include="green-horizotal\css\color-picker\farbtastic.css" />
+    <Content Include="green-horizotal\css\color-picker\marker.png" />
+    <Content Include="green-horizotal\css\color-picker\mask.png" />
+    <Content Include="green-horizotal\css\color-picker\wheel.png" />
+    <Content Include="green-horizotal\css\cropper\cropper.min.css" />
+    <Content Include="green-horizotal\css\datapicker\datepicker3.css" />
+    <Content Include="green-horizotal\css\dialog\dialog.css" />
+    <Content Include="green-horizotal\css\dialog\sweetalert2.min.css" />
+    <Content Include="green-horizotal\css\dropzone\dropzone.css" />
+    <Content Include="green-horizotal\css\font-awesome.min.css" />
+    <Content Include="green-horizotal\css\jquery.dataTables.min.css" />
+    <Content Include="green-horizotal\css\jvectormap\jquery-jvectormap-2.0.3.css" />
+    <Content Include="green-horizotal\css\main.css" />
+    <Content Include="green-horizotal\css\meanmenu\meanmenu.min.css" />
+    <Content Include="green-horizotal\css\metisMenu\metisMenu-vertical.css" />
+    <Content Include="green-horizotal\css\metisMenu\metisMenu.min.css" />
+    <Content Include="green-horizotal\css\normalize.css" />
+    <Content Include="green-horizotal\css\notification\notification.css" />
+    <Content Include="green-horizotal\css\notika-custom-icon.css" />
+    <Content Include="green-horizotal\css\owl.carousel.css" />
+    <Content Include="green-horizotal\css\owl.theme.css" />
+    <Content Include="green-horizotal\css\owl.transitions.css" />
+    <Content Include="green-horizotal\css\responsive.css" />
+    <Content Include="green-horizotal\css\scrollbar\jquery.mCustomScrollbar.min.css" />
+    <Content Include="green-horizotal\css\summernote\summernote.css" />
+    <Content Include="green-horizotal\css\themesaller-forms.css" />
+    <Content Include="green-horizotal\css\wave\button.css" />
+    <Content Include="green-horizotal\css\wave\waves.min.css" />
+    <Content Include="green-horizotal\data-map.html" />
+    <Content Include="green-horizotal\data-table.html" />
+    <Content Include="green-horizotal\dialog.html" />
+    <Content Include="green-horizotal\dropdown.html" />
+    <Content Include="green-horizotal\flot-charts.html" />
+    <Content Include="green-horizotal\fonts\fontawesome-webfont.svg" />
+    <Content Include="green-horizotal\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="green-horizotal\fonts\notika-icon.svg" />
+    <Content Include="green-horizotal\form-components.html" />
+    <Content Include="green-horizotal\form-elements.html" />
+    <Content Include="green-horizotal\form-examples.html" />
+    <Content Include="green-horizotal\google-map.html" />
+    <Content Include="green-horizotal\image-cropper.html" />
+    <Content Include="green-horizotal\images\select.png" />
+    <Content Include="green-horizotal\images\sort_asc.png" />
+    <Content Include="green-horizotal\images\sort_asc_disabled.png" />
+    <Content Include="green-horizotal\images\sort_both.png" />
+    <Content Include="green-horizotal\images\sort_desc.png" />
+    <Content Include="green-horizotal\images\sort_desc_disabled.png" />
+    <Content Include="green-horizotal\img\blog\1.jpg" />
+    <Content Include="green-horizotal\img\chosen-sprite.png" />
+    <Content Include="green-horizotal\img\country\1.png" />
+    <Content Include="green-horizotal\img\country\2.png" />
+    <Content Include="green-horizotal\img\country\3.png" />
+    <Content Include="green-horizotal\img\cropper\1.jpg" />
+    <Content Include="green-horizotal\img\dialog\like.png" />
+    <Content Include="green-horizotal\img\favicon.ico" />
+    <Content Include="green-horizotal\img\green1.png" />
+    <Content Include="green-horizotal\img\logo\favicon.png" />
+    <Content Include="green-horizotal\img\logo\logo.png" />
+    <Content Include="green-horizotal\img\post\1.jpg" />
+    <Content Include="green-horizotal\img\post\2.jpg" />
+    <Content Include="green-horizotal\img\post\4.jpg" />
+    <Content Include="green-horizotal\img\search-engines\baidu.png" />
+    <Content Include="green-horizotal\img\search-engines\bing.png" />
+    <Content Include="green-horizotal\img\search-engines\duckduckgo.png" />
+    <Content Include="green-horizotal\img\search-engines\google.png" />
+    <Content Include="green-horizotal\img\search-engines\yahoo.png" />
+    <Content Include="green-horizotal\img\search-engines\yandex.png" />
+    <Content Include="green-horizotal\img\widgets\2.png" />
+    <Content Include="green-horizotal\img\widgets\4.png" />
+    <Content Include="green-horizotal\img\widgets\6.png" />
+    <Content Include="green-horizotal\inbox.html" />
+    <Content Include="green-horizotal\index-2.html" />
+    <Content Include="green-horizotal\index-3.html" />
+    <Content Include="green-horizotal\index-4.html" />
+    <Content Include="green-horizotal\index.html" />
+    <Content Include="green-horizotal\invoice.html" />
+    <Content Include="green-horizotal\js\animation\animation-active.js" />
+    <Content Include="green-horizotal\js\autosize.min.js" />
+    <Content Include="green-horizotal\js\bootstrap-select\bootstrap-select.js" />
+    <Content Include="green-horizotal\js\bootstrap.min.js" />
+    <Content Include="green-horizotal\js\charts\area-chart.js" />
+    <Content Include="green-horizotal\js\charts\bar-chart.js" />
+    <Content Include="green-horizotal\js\charts\Chart.js" />
+    <Content Include="green-horizotal\js\charts\line-chart.js" />
+    <Content Include="green-horizotal\js\chat\jquery.chat.js" />
+    <Content Include="green-horizotal\js\chat\moment.min.js" />
+    <Content Include="green-horizotal\js\chosen\chosen.jquery.js" />
+    <Content Include="green-horizotal\js\code-editor\code-editor-active.js" />
+    <Content Include="green-horizotal\js\code-editor\code-editor.js" />
+    <Content Include="green-horizotal\js\code-editor\codemirror.js" />
+    <Content Include="green-horizotal\js\color-picker\color-picker.js" />
+    <Content Include="green-horizotal\js\color-picker\farbtastic.min.js" />
+    <Content Include="green-horizotal\js\counterup\counterup-active.js" />
+    <Content Include="green-horizotal\js\counterup\jquery.counterup.min.js" />
+    <Content Include="green-horizotal\js\counterup\waypoints.min.js" />
+    <Content Include="green-horizotal\js\cropper\cropper-actice.js" />
+    <Content Include="green-horizotal\js\cropper\cropper.min.js" />
+    <Content Include="green-horizotal\js\data-map\d3.min.js" />
+    <Content Include="green-horizotal\js\data-map\data-maps-active.js" />
+    <Content Include="green-horizotal\js\data-map\datamaps.all.min.js" />
+    <Content Include="green-horizotal\js\data-map\topojson.js" />
+    <Content Include="green-horizotal\js\data-table\data-table-act.js" />
+    <Content Include="green-horizotal\js\data-table\jquery.dataTables.min.js" />
+    <Content Include="green-horizotal\js\datapicker\bootstrap-datepicker.js" />
+    <Content Include="green-horizotal\js\datapicker\datepicker-active.js" />
+    <Content Include="green-horizotal\js\dialog\dialog-active.js" />
+    <Content Include="green-horizotal\js\dialog\sweetalert2.min.js" />
+    <Content Include="green-horizotal\js\dropzone\dropzone.js" />
+    <Content Include="green-horizotal\js\easytopie\jquery.easypiechart.min.js" />
+    <Content Include="green-horizotal\js\easytopie\salvattore.min.js" />
+    <Content Include="green-horizotal\js\flot\analtic-flot-active.js" />
+    <Content Include="green-horizotal\js\flot\chart-tooltips.js" />
+    <Content Include="green-horizotal\js\flot\curvedLines.js" />
+    <Content Include="green-horizotal\js\flot\flot-active.js" />
+    <Content Include="green-horizotal\js\flot\flot-widget-anatic-active.js" />
+    <Content Include="green-horizotal\js\flot\jquery.flot.js" />
+    <Content Include="green-horizotal\js\flot\jquery.flot.orderBars.js" />
+    <Content Include="green-horizotal\js\flot\jquery.flot.pie.js" />
+    <Content Include="green-horizotal\js\flot\jquery.flot.resize.js" />
+    <Content Include="green-horizotal\js\flot\jquery.flot.time.js" />
+    <Content Include="green-horizotal\js\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="green-horizotal\js\google.maps\google.maps-active.js" />
+    <Content Include="green-horizotal\js\google.maps\google.maps2-active.js" />
+    <Content Include="green-horizotal\js\icheck\icheck-active.js" />
+    <Content Include="green-horizotal\js\icheck\icheck.min.js" />
+    <Content Include="green-horizotal\js\jasny-bootstrap.min.js" />
+    <Content Include="green-horizotal\js\jquery-price-slider.js" />
+    <Content Include="green-horizotal\js\jquery.scrollUp.min.js" />
+    <Content Include="green-horizotal\js\jvectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="green-horizotal\js\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="green-horizotal\js\jvectormap\jvectormap-active.js" />
+    <Content Include="green-horizotal\js\knob\jquery.appear.js" />
+    <Content Include="green-horizotal\js\knob\jquery.knob.js" />
+    <Content Include="green-horizotal\js\knob\knob-active.js" />
+    <Content Include="green-horizotal\js\login\login-action.js" />
+    <Content Include="green-horizotal\js\main.js" />
+    <Content Include="green-horizotal\js\meanmenu\jquery.meanmenu.js" />
+    <Content Include="green-horizotal\js\metisMenu\metisMenu-active.js" />
+    <Content Include="green-horizotal\js\metisMenu\metisMenu.min.js" />
+    <Content Include="green-horizotal\js\notification\bootstrap-growl.min.js" />
+    <Content Include="green-horizotal\js\notification\notification-active.js" />
+    <Content Include="green-horizotal\js\owl.carousel.min.js" />
+    <Content Include="green-horizotal\js\plugins.js" />
+    <Content Include="green-horizotal\js\rangle-slider\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="green-horizotal\js\rangle-slider\jquery-ui-touch-punch.min.js" />
+    <Content Include="green-horizotal\js\rangle-slider\rangle-active.js" />
+    <Content Include="green-horizotal\js\scrollbar\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="green-horizotal\js\sparkline\jquery.sparkline.min.js" />
+    <Content Include="green-horizotal\js\sparkline\sparkline-active.js" />
+    <Content Include="green-horizotal\js\summernote\summernote-active.js" />
+    <Content Include="green-horizotal\js\summernote\summernote-updated.min.js" />
+    <Content Include="green-horizotal\js\summernote\summernote.min.js" />
+    <Content Include="green-horizotal\js\tawk-chat.js" />
+    <Content Include="green-horizotal\js\todo\jquery.todo.js" />
+    <Content Include="green-horizotal\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="green-horizotal\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="green-horizotal\js\wave\wave-active.js" />
+    <Content Include="green-horizotal\js\wave\waves.min.js" />
+    <Content Include="green-horizotal\js\wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="green-horizotal\js\wizard\wizard-active.js" />
+    <Content Include="green-horizotal\js\wow.min.js" />
+    <Content Include="green-horizotal\line-charts.html" />
+    <Content Include="green-horizotal\login-register.html" />
+    <Content Include="green-horizotal\modals.html" />
+    <Content Include="green-horizotal\normal-table.html" />
+    <Content Include="green-horizotal\notification.html" />
+    <Content Include="green-horizotal\popovers.html" />
+    <Content Include="green-horizotal\style.css" />
+    <Content Include="green-horizotal\tabs.html" />
+    <Content Include="green-horizotal\tooltips.html" />
+    <Content Include="green-horizotal\typography.html" />
+    <Content Include="green-horizotal\view-email.html" />
+    <Content Include="green-horizotal\widgets.html" />
+    <Content Include="green-horizotal\wizard.html" />
+    <Content Include="lamoda\blog.html" />
+    <Content Include="lamoda\css\animate.css" />
+    <Content Include="lamoda\css\bootstrap.min.css" />
+    <Content Include="lamoda\css\etlinefont.css" />
+    <Content Include="lamoda\css\font-awesome.css" />
+    <Content Include="lamoda\css\magnific-popup.css" />
+    <Content Include="lamoda\css\style.css" />
+    <Content Include="lamoda\fonts\et-line.svg" />
+    <Content Include="lamoda\fonts\fontawesome-webfont.svg" />
+    <Content Include="lamoda\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lamoda\images\1x1-blue.png" />
+    <Content Include="lamoda\images\blog\avatar1.jpg" />
+    <Content Include="lamoda\images\blog\avatar2.jpg" />
+    <Content Include="lamoda\images\blog\avatar3.jpg" />
+    <Content Include="lamoda\images\blog\avatar4.jpg" />
+    <Content Include="lamoda\images\blog\blog1.jpg" />
+    <Content Include="lamoda\images\blog\blog2.jpg" />
+    <Content Include="lamoda\images\blog\blog3.jpg" />
+    <Content Include="lamoda\images\clients-logo\client1.png" />
+    <Content Include="lamoda\images\clients-logo\client2.png" />
+    <Content Include="lamoda\images\clients-logo\client3.png" />
+    <Content Include="lamoda\images\clients-logo\client4.png" />
+    <Content Include="lamoda\images\clients-logo\client5.png" />
+    <Content Include="lamoda\images\device-desktop.png" />
+    <Content Include="lamoda\images\device.png" />
+    <Content Include="lamoda\images\logo.png" />
+    <Content Include="lamoda\images\page-header.jpg" />
+    <Content Include="lamoda\images\parallax\contact.jpg" />
+    <Content Include="lamoda\images\parallax\cta.jpg" />
+    <Content Include="lamoda\images\parallax\facts.jpg" />
+    <Content Include="lamoda\images\parallax\skills.jpg" />
+    <Content Include="lamoda\images\parallax\testimonials.jpg" />
+    <Content Include="lamoda\images\parallax\timeline.jpg" />
+    <Content Include="lamoda\images\pattern.png" />
+    <Content Include="lamoda\images\progress.gif" />
+    <Content Include="lamoda\images\services1.jpg" />
+    <Content Include="lamoda\images\services2.jpg" />
+    <Content Include="lamoda\images\services3.jpg" />
+    <Content Include="lamoda\images\slider\1.jpg" />
+    <Content Include="lamoda\images\slider\2.jpg" />
+    <Content Include="lamoda\images\slider\3.jpg" />
+    <Content Include="lamoda\images\team\team1.jpg" />
+    <Content Include="lamoda\images\team\team2.jpg" />
+    <Content Include="lamoda\images\team\team3.jpg" />
+    <Content Include="lamoda\images\team\team4.jpg" />
+    <Content Include="lamoda\images\testimonial\testimonial-img1.jpg" />
+    <Content Include="lamoda\images\testimonial\testimonial-img2.jpg" />
+    <Content Include="lamoda\images\timeline-bg.jpg" />
+    <Content Include="lamoda\images\works\img1.jpg" />
+    <Content Include="lamoda\images\works\img10.jpg" />
+    <Content Include="lamoda\images\works\img11.jpg" />
+    <Content Include="lamoda\images\works\img12.jpg" />
+    <Content Include="lamoda\images\works\img2.jpg" />
+    <Content Include="lamoda\images\works\img3.jpg" />
+    <Content Include="lamoda\images\works\img4.jpg" />
+    <Content Include="lamoda\images\works\img5.jpg" />
+    <Content Include="lamoda\images\works\img6.jpg" />
+    <Content Include="lamoda\images\works\img7.jpg" />
+    <Content Include="lamoda\images\works\img8.jpg" />
+    <Content Include="lamoda\images\works\img9.jpg" />
+    <Content Include="lamoda\index.html" />
+    <Content Include="lamoda\js\bootstrap.min.js" />
+    <Content Include="lamoda\js\custom.js" />
+    <Content Include="lamoda\js\easing.js" />
+    <Content Include="lamoda\js\jquery-1.11.1.min.js" />
+    <Content Include="lamoda\js\jquery.appear.js" />
+    <Content Include="lamoda\js\jquery.easypiechart.js" />
+    <Content Include="lamoda\js\jquery.flexslider-min.js" />
+    <Content Include="lamoda\js\jquery.magnific-popup.min.js" />
+    <Content Include="lamoda\js\jquery.mixitup.min.js" />
+    <Content Include="lamoda\js\jquery.parallax-1.1.3.js" />
+    <Content Include="lamoda\js\owl-carousel\AjaxLoader.gif" />
+    <Content Include="lamoda\js\owl-carousel\grabbing.png" />
+    <Content Include="lamoda\js\owl-carousel\owl.carousel.css" />
+    <Content Include="lamoda\js\owl-carousel\owl.carousel.js" />
+    <Content Include="lamoda\js\owl-carousel\owl.theme.css" />
+    <Content Include="lamoda\js\owl-carousel\owl.transitions.css" />
+    <Content Include="lamoda\LICENSE.txt" />
+    <Content Include="lamoda\single-work.html" />
+    <Content Include="Login-form\css\bootstrap.min.css" />
+    <Content Include="Login-form\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="Login-form\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Login-form\css\owl.carousel.min.css" />
+    <Content Include="Login-form\css\style.css" />
+    <Content Include="Login-form\fonts\icomoon\demo-files\demo.css" />
+    <Content Include="Login-form\fonts\icomoon\demo-files\demo.js" />
+    <Content Include="Login-form\fonts\icomoon\demo.html" />
+    <Content Include="Login-form\fonts\icomoon\fonts\icomoon.svg" />
+    <Content Include="Login-form\fonts\icomoon\Read Me.txt" />
+    <Content Include="Login-form\fonts\icomoon\style.css" />
+    <Content Include="Login-form\images\bg_1.jpg" />
+    <Content Include="Login-form\images\undraw_file_sync_ot38.svg" />
+    <Content Include="Login-form\index.html" />
+    <Content Include="Login-form\js\bootstrap.min.js" />
+    <Content Include="Login-form\js\jquery-3.3.1.min.js" />
+    <Content Include="Login-form\js\main.js" />
+    <Content Include="Login-form\js\owl.carousel.min.js" />
+    <Content Include="Login-form\js\popper.min.js" />
+    <Content Include="Login-form\main.html" />
+    <Content Include="paper-dashboard-master\assets\css\bootstrap.min.css" />
+    <Content Include="paper-dashboard-master\assets\css\paper-dashboard.css" />
+    <Content Include="paper-dashboard-master\assets\css\paper-dashboard.min.css" />
+    <Content Include="paper-dashboard-master\assets\demo\demo.css" />
+    <Content Include="paper-dashboard-master\assets\demo\demo.js" />
+    <Content Include="paper-dashboard-master\assets\img\apple-icon.png" />
+    <Content Include="paper-dashboard-master\assets\img\bg5.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\damir-bosnjak.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\default-avatar.png" />
+    <Content Include="paper-dashboard-master\assets\img\faces\ayo-ogunseinde-1.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\ayo-ogunseinde-2.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\clem-onojeghuo-1.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\clem-onojeghuo-2.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\clem-onojeghuo-3.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\clem-onojeghuo-4.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\erik-lucatero-1.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\erik-lucatero-2.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\joe-gardner-1.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\joe-gardner-2.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\kaci-baum-1.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\faces\kaci-baum-2.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\favicon.png" />
+    <Content Include="paper-dashboard-master\assets\img\header.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\jan-sendereks.jpg" />
+    <Content Include="paper-dashboard-master\assets\img\logo-small.png" />
+    <Content Include="paper-dashboard-master\assets\img\mike.jpg" />
+    <Content Include="paper-dashboard-master\assets\js\core\bootstrap.min.js" />
+    <Content Include="paper-dashboard-master\assets\js\core\jquery.min.js" />
+    <Content Include="paper-dashboard-master\assets\js\core\popper.min.js" />
+    <Content Include="paper-dashboard-master\assets\js\paper-dashboard.js" />
+    <Content Include="paper-dashboard-master\assets\js\paper-dashboard.min.js" />
+    <Content Include="paper-dashboard-master\assets\js\plugins\bootstrap-notify.js" />
+    <Content Include="paper-dashboard-master\assets\js\plugins\chartjs.min.js" />
+    <Content Include="paper-dashboard-master\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="paper-dashboard-master\docs\documentation.html" />
+    <Content Include="paper-dashboard-master\examples\dashboard.html" />
+    <Content Include="paper-dashboard-master\examples\icons.html" />
+    <Content Include="paper-dashboard-master\examples\map.html" />
+    <Content Include="paper-dashboard-master\examples\notifications.html" />
+    <Content Include="paper-dashboard-master\examples\tables.html" />
+    <Content Include="paper-dashboard-master\examples\typography.html" />
+    <Content Include="paper-dashboard-master\examples\upgrade.html" />
+    <Content Include="paper-dashboard-master\examples\user.html" />
+    <Content Include="paper-dashboard-master\gulpfile.js" />
+    <Content Include="paper-dashboard-master\nucleo-icons.html" />
+    <Content Include="paper-dashboard-master\template.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Login-form\.DS_Store" />
+    <Content Include="Login-form\css\.DS_Store" />
+    <Content Include="Login-form\css\bootstrap.min.css.map" />
+    <Content Include="Login-form\fonts\.DS_Store" />
+    <Content Include="Login-form\fonts\icomoon\fonts\icomoon.eot" />
+    <Content Include="Login-form\fonts\icomoon\fonts\icomoon.ttf" />
+    <Content Include="Login-form\fonts\icomoon\fonts\icomoon.woff" />
+    <Content Include="Login-form\fonts\icomoon\selection.json" />
+    <Content Include="Login-form\images\.DS_Store" />
+    <Content Include="Login-form\scss\.DS_Store" />
+    <Content Include="Login-form\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Login-form\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Login-form\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Login-form\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Login-form\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Login-form\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="Login-form\scss\bootstrap\_alert.scss" />
+    <Content Include="Login-form\scss\bootstrap\_badge.scss" />
+    <Content Include="Login-form\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Login-form\scss\bootstrap\_button-group.scss" />
+    <Content Include="Login-form\scss\bootstrap\_buttons.scss" />
+    <Content Include="Login-form\scss\bootstrap\_card.scss" />
+    <Content Include="Login-form\scss\bootstrap\_carousel.scss" />
+    <Content Include="Login-form\scss\bootstrap\_close.scss" />
+    <Content Include="Login-form\scss\bootstrap\_code.scss" />
+    <Content Include="Login-form\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Login-form\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Login-form\scss\bootstrap\_forms.scss" />
+    <Content Include="Login-form\scss\bootstrap\_functions.scss" />
+    <Content Include="Login-form\scss\bootstrap\_grid.scss" />
+    <Content Include="Login-form\scss\bootstrap\_images.scss" />
+    <Content Include="Login-form\scss\bootstrap\_input-group.scss" />
+    <Content Include="Login-form\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Login-form\scss\bootstrap\_list-group.scss" />
+    <Content Include="Login-form\scss\bootstrap\_media.scss" />
+    <Content Include="Login-form\scss\bootstrap\_mixins.scss" />
+    <Content Include="Login-form\scss\bootstrap\_modal.scss" />
+    <Content Include="Login-form\scss\bootstrap\_nav.scss" />
+    <Content Include="Login-form\scss\bootstrap\_navbar.scss" />
+    <Content Include="Login-form\scss\bootstrap\_pagination.scss" />
+    <Content Include="Login-form\scss\bootstrap\_popover.scss" />
+    <Content Include="Login-form\scss\bootstrap\_print.scss" />
+    <Content Include="Login-form\scss\bootstrap\_progress.scss" />
+    <Content Include="Login-form\scss\bootstrap\_reboot.scss" />
+    <Content Include="Login-form\scss\bootstrap\_root.scss" />
+    <Content Include="Login-form\scss\bootstrap\_spinners.scss" />
+    <Content Include="Login-form\scss\bootstrap\_tables.scss" />
+    <Content Include="Login-form\scss\bootstrap\_toasts.scss" />
+    <Content Include="Login-form\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Login-form\scss\bootstrap\_transitions.scss" />
+    <Content Include="Login-form\scss\bootstrap\_type.scss" />
+    <Content Include="Login-form\scss\bootstrap\_utilities.scss" />
+    <Content Include="Login-form\scss\bootstrap\_variables.scss" />
+    <Content Include="Login-form\scss\style.scss" />
+    <Content Include="green-horizotal\fonts\fontawesome-webfont.eot" />
+    <Content Include="green-horizotal\fonts\fontawesome-webfont.ttf" />
+    <Content Include="green-horizotal\fonts\fontawesome-webfont.woff" />
+    <Content Include="green-horizotal\fonts\fontawesome-webfont.woff2" />
+    <Content Include="green-horizotal\fonts\FontAwesome.otf" />
+    <Content Include="green-horizotal\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="green-horizotal\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="green-horizotal\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="green-horizotal\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="green-horizotal\fonts\notika-icon.eot" />
+    <Content Include="green-horizotal\fonts\notika-icon.ttf" />
+    <Content Include="green-horizotal\fonts\notika-icon.woff" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\AdminLogin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="lamoda\fonts\et-line.eot" />
+    <Content Include="lamoda\fonts\et-line.ttf" />
+    <Content Include="lamoda\fonts\et-line.woff" />
+    <Content Include="lamoda\fonts\fontawesome-webfont.eot" />
+    <Content Include="lamoda\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lamoda\fonts\fontawesome-webfont.woff" />
+    <Content Include="lamoda\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lamoda\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lamoda\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lamoda\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lamoda\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fullcalendar-master\README.md" />
+    <Content Include="paper-dashboard-master\.github\workflows\main.yml" />
+    <Content Include="paper-dashboard-master\assets\css\bootstrap.min.css.map" />
+    <Content Include="paper-dashboard-master\assets\css\paper-dashboard.css.map" />
+    <Content Include="paper-dashboard-master\assets\fonts\nucleo-icons.eot" />
+    <Content Include="paper-dashboard-master\assets\fonts\nucleo-icons.ttf" />
+    <Content Include="paper-dashboard-master\assets\fonts\nucleo-icons.woff" />
+    <Content Include="paper-dashboard-master\assets\fonts\nucleo-icons.woff2" />
+    <Content Include="paper-dashboard-master\assets\js\paper-dashboard.js.map" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\cards\_card-chart.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\cards\_card-map.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\cards\_card-plain.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\cards\_card-stats.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\cards\_card-user.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\mixins\_buttons.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\mixins\_cards.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\mixins\_dropdown.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\mixins\_inputs.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\mixins\_page-header.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\mixins\_transparency.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\mixins\_vendor-prefixes.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\plugins\_plugin-animate-bootstrap-notify.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\plugins\_plugin-perfect-scrollbar.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_alerts.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_animated-buttons.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_buttons.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_cards.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_checkboxes-radio.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_dropdown.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_fixed-plugin.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_footers.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_images.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_inputs.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_misc.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_mixins.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_navbar.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_nucleo-outline.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_page-header.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_responsive.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_sidebar-and-main-panel.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_tables.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_typography.scss" />
+    <Content Include="paper-dashboard-master\assets\scss\paper-dashboard\_variables.scss" />
+    <Content Include="paper-dashboard-master\CHANGELOG.md" />
+    <Content Include="paper-dashboard-master\ISSUE_TEMPLATE.md" />
+    <Content Include="paper-dashboard-master\LICENSE" />
+    <Content Include="paper-dashboard-master\package.json" />
+    <Content Include="paper-dashboard-master\README.md" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Citizens\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Citizens\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Citizens\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Citizens\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Citizens\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AppManagers\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AppManagers\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AppManagers\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AppManagers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AppManagers\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Events\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Events\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Events\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Events\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Events\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Banks\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Banks\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Banks\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Banks\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Banks\Index.cshtml" />
+    <None Include="Scripts\jquery-3.6.0-vsdoc.js" />
+    <Content Include="Scripts\CalendarAppCag.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="xtreme\assets\images\custom-select.png" />
+    <Content Include="xtreme\assets\images\favicon.png" />
+    <Content Include="xtreme\assets\images\logo-icon.png" />
+    <Content Include="xtreme\assets\images\logo-light-icon.png" />
+    <Content Include="xtreme\assets\images\logo-light-text.png" />
+    <Content Include="xtreme\assets\images\logo-text.png" />
+    <Content Include="xtreme\assets\images\users\1-old.jpg" />
+    <Content Include="xtreme\assets\images\users\1.jpg" />
+    <Content Include="xtreme\assets\images\users\1.png" />
+    <Content Include="xtreme\assets\images\users\2.jpg" />
+    <Content Include="xtreme\assets\images\users\2.png" />
+    <Content Include="xtreme\assets\images\users\3.jpg" />
+    <Content Include="xtreme\assets\images\users\3.png" />
+    <Content Include="xtreme\assets\images\users\4.jpg" />
+    <Content Include="xtreme\assets\images\users\5.jpg" />
+    <Content Include="xtreme\assets\images\users\6.jpg" />
+    <Content Include="xtreme\assets\images\users\7.jpg" />
+    <Content Include="xtreme\assets\images\users\8.jpg" />
+    <Content Include="xtreme\assets\images\users\agent.jpg" />
+    <Content Include="xtreme\assets\images\users\agent2.jpg" />
+    <Content Include="xtreme\assets\images\users\d1.jpg" />
+    <Content Include="xtreme\assets\images\users\d2.jpg" />
+    <Content Include="xtreme\assets\images\users\d3.jpg" />
+    <Content Include="xtreme\assets\images\users\d4.jpg" />
+    <Content Include="xtreme\assets\images\users\d5.jpg" />
+    <Content Include="xtreme\assets\images\users\profile.png" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="xtreme\assets\libs\chartist-plugin-tooltips\dist\chartist-plugin-tooltip.css" />
+    <Content Include="xtreme\assets\libs\chartist-plugin-tooltips\dist\chartist-plugin-tooltip.min.js" />
+    <Content Include="xtreme\assets\libs\chartist\dist\chartist.min.css" />
+    <Content Include="xtreme\assets\libs\chartist\dist\chartist.min.js" />
+    <Content Include="xtreme\assets\libs\jquery\dist\core.js" />
+    <Content Include="xtreme\assets\libs\jquery\dist\jquery.min.js" />
+    <Content Include="xtreme\assets\libs\jquery\dist\jquery.slim.min.js" />
+    <Content Include="xtreme\assets\libs\perfect-scrollbar\dist\css\perfect-scrollbar.min.css" />
+    <Content Include="xtreme\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="xtreme\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.min.js" />
+    <Content Include="xtreme\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.common.js" />
+    <Content Include="xtreme\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.esm.js" />
+    <Content Include="xtreme\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.jquery.min.js" />
+    <Content Include="xtreme\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.min.js" />
+    <Content Include="xtreme\assets\libs\popper.js\dist\esm\popper-utils.min.js" />
+    <Content Include="xtreme\assets\libs\popper.js\dist\esm\popper.min.js" />
+    <Content Include="xtreme\assets\libs\popper.js\dist\popper-utils.min.js" />
+    <Content Include="xtreme\assets\libs\popper.js\dist\popper.min.js" />
+    <Content Include="xtreme\assets\libs\popper.js\dist\umd\popper-utils.min.js" />
+    <Content Include="xtreme\assets\libs\popper.js\dist\umd\popper.min.js" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fa-brands.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fa-brands.min.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fa-regular.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fa-regular.min.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fa-solid.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fa-solid.min.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fontawesome-all.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fontawesome-all.min.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fontawesome.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\css\fontawesome.min.css" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\themify-icons.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\css\weather-icons-core.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\css\weather-icons-variables.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\css\weather-icons-wind.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\css\weather-icons-wind.min.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\css\weather-icons.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\css\weather-icons.min.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-beaufort.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-day.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-direction.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-misc.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-moon.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-neutral.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-night.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-time.css" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\css\variables-wind-names.css" />
+    <Content Include="xtreme\dist\css\style.css" />
+    <Content Include="xtreme\dist\css\style.min.css" />
+    <Content Include="xtreme\dist\js\app-style-switcher.js" />
+    <Content Include="xtreme\dist\js\custom.js" />
+    <Content Include="xtreme\dist\js\pages\dashboards\dashboard1.js" />
+    <Content Include="xtreme\dist\js\sidebarmenu.js" />
+    <Content Include="xtreme\dist\js\waves.js" />
+    <Content Include="xtreme\html\ltr\index.html" />
+    <Content Include="xtreme\xtreme-html\ltr\error-404.html" />
+    <Content Include="xtreme\xtreme-html\ltr\icon-material.html" />
+    <Content Include="xtreme\xtreme-html\ltr\index.html" />
+    <Content Include="xtreme\xtreme-html\ltr\pages-profile.html" />
+    <Content Include="xtreme\xtreme-html\ltr\starter-kit.html" />
+    <Content Include="xtreme\xtreme-html\ltr\table-basic.html" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\GetMenu.cshtml" />
+    <Content Include="Views\Home\LoginUser.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\CitizenLogin\Index.cshtml" />
+    <Content Include="Views\Shared\_MainPageLayout.cshtml" />
+    <Content Include="Views\CitizenList\Index.cshtml" />
+    <Content Include="Views\CitizenForUser\Index.cshtml" />
+    <Content Include="xtreme\assets\.DS_Store" />
+    <Content Include="xtreme\assets\libs\.DS_Store" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\.DS_Store" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="xtreme\assets\libs\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="xtreme\dist\.DS_Store" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\fa-brands.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\fa-regular.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\fa-solid.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\fontawesome.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_animated.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_bordered-pulled.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_core.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_fixed-width.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_icons.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_larger.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_list.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_mixins.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_rotated-flipped.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_screen-reader.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_stacked.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\less\_variables.less" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\fa-brands.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\fa-regular.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\fa-solid.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\fontawesome.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_core.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_list.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="xtreme\dist\css\icons\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="xtreme\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="xtreme\dist\css\icons\themify-icons\themify-icons.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-beaufort.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-day.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-direction.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-misc.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-moon-aliases.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-moon.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-neutral.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-night.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-time.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-wind-aliases.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-wind-degrees.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-classes\classes-wind.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-beaufort.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-day.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-direction.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-misc.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-moon.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-neutral.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-night.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-time.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\icon-variables\variables-wind-names.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\mappings\wi-forecast-io.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\mappings\wi-owm.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\mappings\wi-wmo4680.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\mappings\wi-yahoo.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\weather-icons-classes.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\weather-icons-core.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\weather-icons-variables.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\weather-icons-wind.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\weather-icons-wind.min.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\weather-icons.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\less\weather-icons.min.less" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-beaufort.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-day.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-direction.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-misc.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-moon-aliases.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-moon.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-neutral.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-night.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-time.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-wind-aliases.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-wind-degrees.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-classes\classes-wind.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-beaufort.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-day.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-direction.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-misc.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-moon.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-neutral.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-night.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-time.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\icon-variables\variables-wind-names.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\mappings\wi-forecast-io.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\mappings\wi-owm.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\mappings\wi-wmo4680.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\mappings\wi-yahoo.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\weather-icons-classes.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\weather-icons-core.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\weather-icons-variables.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\weather-icons-wind.min.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\weather-icons-wind.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\weather-icons.min.scss" />
+    <Content Include="xtreme\dist\css\icons\weather-icons\sass\weather-icons.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\.DS_Store" />
+    <Content Include="xtreme\src\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\bootstrap-utilities.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\bootstrap.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_floating-labels.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_form-check.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_form-control.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_form-range.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_form-select.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_form-text.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_input-group.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_labels.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\forms\_validation.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\helpers\_clearfix.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\helpers\_colored-links.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\helpers\_position.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\helpers\_ratio.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\helpers\_stretched-link.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\helpers\_text-truncation.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\helpers\_visually-hidden.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_container.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_table-variants.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_utilities.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\mixins\_visually-hidden.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\utilities\_api.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_accordion.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_alert.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_badge.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_button-group.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_buttons.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_card.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_carousel.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_close.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_containers.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_dropdown.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_forms.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_functions.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_grid.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_helpers.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_images.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_list-group.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_mixins.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_modal.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_nav.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_navbar.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_pagination.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_popover.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_progress.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_reboot.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_root.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_spinners.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_tables.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_toasts.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_tooltip.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_transitions.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_type.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_utilities.scss" />
+    <Content Include="xtreme\src\scss\bootstrap\_variables.scss" />
+    <Content Include="xtreme\src\scss\components.scss" />
+    <Content Include="xtreme\src\scss\core\animation\animation.scss" />
+    <Content Include="xtreme\src\scss\core\breadcrumb\breadcrumb.scss" />
+    <Content Include="xtreme\src\scss\core\buttons\buttons.scss" />
+    <Content Include="xtreme\src\scss\core\core.scss" />
+    <Content Include="xtreme\src\scss\core\extra\extra.scss" />
+    <Content Include="xtreme\src\scss\core\layout\layout.scss" />
+    <Content Include="xtreme\src\scss\core\loader\spinner.scss" />
+    <Content Include="xtreme\src\scss\core\scafholdings\scafholding.scss" />
+    <Content Include="xtreme\src\scss\core\sidebar\sidebar.scss" />
+    <Content Include="xtreme\src\scss\core\topbar\header.scss" />
+    <Content Include="xtreme\src\scss\core\topbar\notify.scss" />
+    <Content Include="xtreme\src\scss\core\wave-effects\wave-effects.scss" />
+    <Content Include="xtreme\src\scss\custom.scss" />
+    <Content Include="xtreme\src\scss\mixins\padding-margin.scss" />
+    <Content Include="xtreme\src\scss\responsive.scss" />
+    <Content Include="xtreme\src\scss\style.scss" />
+    <Content Include="xtreme\src\scss\theme-colors\theme-colors.scss" />
+    <Content Include="xtreme\src\scss\variable.scss" />
+    <Content Include="xtreme\src\scss\widgets\comments.scss" />
+    <Content Include="xtreme\src\scss\widgets\feeds.scss" />
+    <Content Include="xtreme\src\scss\widgets\profile.scss" />
+    <Content Include="xtreme\src\scss\widgets\steamline.scss" />
+    <Content Include="xtreme\src\scss\widgets\widgets.scss" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\Calendar\Index.cshtml" />
+    <Content Include="Views\CitizenList\GetCalendar.cshtml" />
+    <Content Include="Views\Calendar\GetEvents.cshtml" />
+    <Content Include="Views\CitizenList\GetData.cshtml" />
+    <Content Include="Views\Shared\_CitizenLayout.cshtml" />
+    <Content Include="Views\CitizenList\GetName.cshtml" />
+    <Content Include="Views\Banks\Create.cshtml" />
+    <Content Include="Views\Banks\Delete.cshtml" />
+    <Content Include="Views\Banks\Details.cshtml" />
+    <Content Include="Views\Banks\Edit.cshtml" />
+    <Content Include="Views\Banks\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Manager.Core.Model\Manager.Core.Model.csproj">
+      <Project>{8a176604-cf35-4591-8ec7-53c016fadd67}</Project>
+      <Name>Manager.Core.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64066</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64066/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

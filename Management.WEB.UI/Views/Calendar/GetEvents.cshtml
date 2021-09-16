@@ -1,0 +1,43 @@
+﻿
+@model IEnumerable<Manager.Core.Model.Entity.Events>
+
+@{
+    Layout = null;
+}
+
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+@foreach (var item in Model)
+{
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Ödeyen Kişi ID</th>
+                <th scope="col">Ödeyen Kişi</th>
+                <th scope="col">Ödeme Başlangıç</th>
+                <th scope="col">Ödeme Bitiş</th>
+                <th scope="col">Ödeme Durumu</th>
+                <th scope="col">Ödeme Nereye Harcandı </th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@item.CitizenID</th>
+                <td>@item.Citizens</td>
+                <td>@item.Start</td>
+                <td>@item.End</td>
+                <td>@item.IsPayment</td>
+                <td>@item.Description</td>
+                
+            </tr>
+
+        </tbody>
+    </table>
+
+}
+    <a href="/CitizenList"><button type="button" class="btn btn-success">Anasayfa</button></a>

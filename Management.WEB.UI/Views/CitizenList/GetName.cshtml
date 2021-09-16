@@ -1,0 +1,13 @@
+﻿@using Manager.Core.Model.Entity
+@model List<Citizen>
+@{
+    ViewBag.Title = "GetName";
+    Layout = "~/Views/Shared/_CitizenLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    @item.CitizenName
+    @item.CitizenLastName
+}
+

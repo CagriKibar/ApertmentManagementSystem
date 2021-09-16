@@ -1,0 +1,136 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html lang="en">
+<script type="text/javascript" language="”JavaScript”">
+    window.history.forward(1);
+</script>
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="~/paper-dashboard-master/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/paper-dashboard-master/assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="~/paper-dashboard-master/assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+
+
+<body class="">
+   
+    <div class="wrapper ">
+        <div class="sidebar" data-color="white" data-active-color="danger">
+            <div class="logo">
+                <a href="#" class="simple-text logo-mini">
+
+                    <!-- <div class="logo-image-small">
+                  <img src="./assets/img/logo-small.png">
+                </div> -->
+                    <!-- <p>CT</p> -->
+                </a>
+                <a href="#" class="simple-text logo-normal">
+
+                    <!-- <div class="logo-image-big">
+                  <img src="../assets/img/logo-big.png">
+                </div> -->
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+
+                    <li>
+                        <a href="javascript:;">
+                            <i class="nc-icon nc-single-copy-04"></i>
+                            <p>Makbuz</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Citizens">
+                            <i class="nc-icon nc-satisfied"></i>
+                            <p>Kullanıcı Kontrolü</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Banks">
+                            <i class="nc-icon nc-bank"></i>
+                            <p>Kasa</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Events">
+                            <i class="nc-icon nc-badge"></i>
+                            <p>Takvim</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/AppManagers/Index">
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>Durum Kontrolü</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home">
+                            <i class="nc-icon nc-button-power"></i>
+                            <p>Çıkış Yap</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="description">Bu Sayfa Tüm Kullanıcıların Ödeme Bilgilerini İçermektedir. </h3>
+                </div>
+                @RenderBody()
+
+            </div>
+        </div>
+        <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;">
+            <div class="container-fluid">
+                <div class="row">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="MailTo: cagri.kibar@outlook.com" target="_blank">İletişim</a></li>
+                            Tüm hakları saklıdır.
+                        </ul>
+                    </nav>
+                    <div class="credits ml-auto">
+                        <span class="copyright">
+                            © 2021, made with <i class="fa fa-heart heart"></i> by Çağrı KİBAR
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script src="~/paper-dashboard-master/assets/js/core/jquery.min.js"></script>
+    <script src="~/paper-dashboard-master/assets/js/core/popper.min.js"></script>
+    <script src="~/paper-dashboard-master/assets/js/core/bootstrap.min.js"></script>
+    <script src="~/paper-dashboard-master/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chart JS -->
+    <script src="./assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="~/paper-dashboard-master/assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="~/paper-dashboard-master/assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+
+</body>
+
+</html>

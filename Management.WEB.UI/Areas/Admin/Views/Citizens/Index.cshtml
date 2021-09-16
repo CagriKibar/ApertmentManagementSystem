@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Manager.Core.Model.Entity.Citizen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+<p>
+    <button class="btn btn-default">@Html.ActionLink("Yeni Oluştur", "Create")</button>   
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CitizenName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CitizenLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentDate)
+        </th>
+        
+        
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CitizenName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CitizenLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentDate)
+        </td>
+       
+        
+        <td>
+            <button class="btn btn-default">@Html.ActionLink("Düzenle", "Edit", new { id = item.ID })</button>   
+            <button class="btn btn-default">@Html.ActionLink("Detaylar", "Details", new { id = item.ID })</button>
+            <button class="btn btn-default">@Html.ActionLink("Delete", "Delete", new { id = item.ID })</button> 
+        </td>
+    </tr>
+}
+
+</table>

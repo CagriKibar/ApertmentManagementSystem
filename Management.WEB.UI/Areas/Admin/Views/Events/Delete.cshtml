@@ -1,0 +1,74 @@
+﻿@model Manager.Core.Model.Entity.Events
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h3>Silmek İstediğinden Emin misiniz ?</h3>
+<div>
+    <h4>Events</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Start)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFullDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFullDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CitizenID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CitizenID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />
+            <button class="btn btn-default">@Html.ActionLink("Önceki Sayfa", "Index")</button>  
+        </div>
+    }
+</div>
+<br />

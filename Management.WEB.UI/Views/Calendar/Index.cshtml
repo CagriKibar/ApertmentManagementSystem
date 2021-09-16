@@ -1,0 +1,10 @@
+﻿
+@model IEnumerable<Manager.Core.Model.Entity.Events>
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+@Html.Action("GetEvents", "Calendar")

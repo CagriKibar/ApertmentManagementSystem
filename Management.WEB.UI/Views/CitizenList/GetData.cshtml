@@ -1,0 +1,40 @@
+﻿
+@using Manager.Core.Model.Entity
+@model List<Citizen>
+
+@{
+    /**/
+
+    Layout = null;
+}
+
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+@foreach (var item in Model)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">İsim</th>
+                <th scope="col">Soyisim</th>
+                <th scope="col">Ödeme Tutarı</th>
+                <th scope="col">Ödeme Tarihi</th>
+                <th scope="col">Son Güncel Ödenen Tarih</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>@item.CitizenName</td>
+                <td>@item.CitizenLastName</td>
+                <td>@item.Payment</td>
+                <td>@item.PaymentDate</td>
+                <td>@item.UpdateDate</td>
+
+            </tr>
+        </tbody>
+    </table>
+}
